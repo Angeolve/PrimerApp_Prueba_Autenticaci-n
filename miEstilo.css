@@ -1,0 +1,70 @@
+body{
+    background-color: pink; /*color de fondo*/
+}
+h1{/*estilo al texto del encabezado*/
+    color: white;/* color*/
+    font-family:'Poppins', sans-serif;/*fuente del estilo de la familia poppins*/
+    text-align: center;/*texto centrado*/
+    margin-bottom: 20px; /* espacio inferior añadido para mejor separación */
+}
+#logueo, #guardar{/*propiedades en comun de estos bottones*/
+    background-color: black;/*color de fondo*/
+    color: white;/*de texto de 16 pixeles de color blanco*/
+    border: 1px solid#4FB1FF;/*borde azul con un pixel de a<ncho*/
+    font-size: 16px;/*texto de 16 pixeles, tamaño*/
+    text-align: center;/**/
+    cursor: pointer;/* se visualizara el cursos como una pequeña mano con este valor*/
+    display: inline-block;/*el boton gaurdar aparezca debajo del boton de correo electronico, determina el comportamiento que tendra los botones cuando el cursor este enfrente de ellos*/
+    padding: 10px 20px; /* relleno interno para mejor apariencia */
+    margin: 5px; /* espacio entre botones */
+    border-radius: 5px; /* bordes ligeramente redondeados */
+    transition: all 0.3s ease; /* transición suave para efectos hover */
+}
+#logueo:hover, #guardar:hover{/* hover para señalar que el color de fondo cambie de color y el texto igual, establece las reglas de estilo*/
+    background-color: aquamarine;/**/
+    color: black;/**/
+}
+#contenedor{
+    width: auto;/*ancho auto, crezac de acuerdo al tamaño de elementos que hay en el interior*/
+    text-align: center;/*centrar botones*/
+    max-width: 500px; /* ancho máximo para mejor visualización */
+    margin: 0 auto; /* centrado horizontal */
+    padding: 20px; /* espacio interno */
+    background-color: rgba(255, 255, 255, 0.3); /* fondo semitransparente */
+    border-radius: 10px; /* bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra sutil */
+}
+#foto{
+    width: 150px; /* ancho fijo para el contenedor circular */
+    height: 150px; /* alto igual al ancho para forma perfectamente circular */
+    margin: 0 auto 20px; /* centrado con margen inferior */
+    position:relative; /*centrada dentro del div*/
+    border-radius: 50%; /* forma circular */
+    overflow: hidden; /* oculta partes de imagen que sobresalgan */
+    border: 3px solid #4FB1FF; /* borde azul */
+    background-color: #ddd; /* color de fondo por defecto */
+    display: flex; /* permite centrado fácil */
+    align-items: center; /* centrado vertical */
+    justify-content: center; /* centrado horizontal */
+}
+#foto img{
+    width: 100%; /* ocupa todo el ancho del contenedor */
+    height: 100%; /* ocupa todo el alto del contenedor */
+    object-fit: cover; /* cubre el espacio manteniendo proporciones */
+}
+#principal{
+    margin-top: 20px; /* espacio superior */
+    padding: 15px; /* relleno interno */
+    background-color: rgba(255, 255, 255, 0.5); /* fondo semitransparente */
+    border-radius: 8px; /* bordes redondeados */
+    font-family: 'Poppins', sans-serif; /* mantiene la tipografía consistente */
+}
+#principal h2{
+    color: #4FB1FF; /* color azul para el título */
+    margin-bottom: 10px; /* espacio inferior */
+}
+/* Estilo para cuando no hay foto de perfil */
+.default-avatar{
+    font-size: 60px; /* tamaño del emoji */
+    color: #666; /* color gris */
+}

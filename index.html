@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PRIMERA APP DE AUTENTICACIÓN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="miEstilo.css">
+</head>
+<body>
+    <h1>Inicia sesión para comprar tus entradas</h1>
+    <div id="contenedor">
+        <!-- Este div ahora mostrará la foto del usuario -->
+        <div id="foto"></div>
+        <button id="logueo">Con tu correo electrónico</button>
+        <!-- Este div mostrará otros datos del usuario -->
+        <div id="principal"></div>
+        <button id="guardar">Recordarme</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBaXuN2cDMpOuKBVU_UMR96PqhnCA_zJd0",
+            authDomain: "mi-primera-app-25d5e.firebaseapp.com",
+            projectId: "mi-primera-app-25d5e",
+            storageBucket: "mi-primera-app-25d5e.appspot.com",
+            messagingSenderId: "930666407709",
+            appId: "1:930666407709:web:a0f9ad607161e06f6c23f4"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        window.auth = getAuth(app);
+        window.provider = new GoogleAuthProvider();
+        window.db = getFirestore();
+    </script>
+    <script src="fundionalidadApp.js"></script>
+</body>
+</html>
