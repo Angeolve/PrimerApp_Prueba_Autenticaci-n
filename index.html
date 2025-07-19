@@ -18,7 +18,9 @@
         <button id="guardar">Recordarme</button>
     </div>
 
+    <!-- Usamos Jquery  y la version-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- Importamos codigo de firebase -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
         import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
@@ -38,6 +40,6 @@
         window.provider = new GoogleAuthProvider();
         window.db = getFirestore();
     </script>
-    <script src="fundionalidadApp.js"></script>
+    <script src="fundionalidadApp.js"></script>  <!-- Enlazamos con el archivo js -->
 </body>
 </html>
